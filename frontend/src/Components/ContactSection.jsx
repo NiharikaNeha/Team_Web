@@ -8,7 +8,6 @@ const Contact = () => {
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  // ✅ Send via WhatsApp
   const handleSendWhatsApp = () => {
     const phoneNumber = "91XXXXXXXXXX"; // replace with your WhatsApp number
     const message = `Hello, my name is ${form.name}. My email is ${form.email}. Message: ${form.message}`;
@@ -18,11 +17,10 @@ const Contact = () => {
     window.open(url, "_blank");
   };
 
-  // ✅ Send via Gmail
   const handleSendEmail = () => {
     const subject = "New Contact Form Message";
     const body = `Hello, my name is ${form.name}. My email is ${form.email}. Message: ${form.message}`;
-    window.location.href = `mailto:yourmail@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:swainniharika27@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
   };
@@ -63,7 +61,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Name */}
+
           <div className="relative">
             <input
               type="text"
@@ -75,7 +73,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Email */}
           <div className="relative">
             <input
               type="email"
@@ -87,7 +84,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Message */}
           <div className="relative">
             <textarea
               name="message"
@@ -99,7 +95,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Action Buttons */}
           <div className="flex flex-col md:flex-row gap-4">
             <motion.button
               type="submit"
@@ -132,7 +127,6 @@ const Contact = () => {
           </div>
         </motion.form>
 
-        {/* Info Cards */}
         <motion.div
           className="mt-12 grid md:grid-cols-3 gap-6"
           initial={{ opacity: 0 }}

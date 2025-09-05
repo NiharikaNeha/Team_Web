@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   const socialLinks = [
     { icon: <FaFacebookF />, url: "#" },
     { icon: <FaTwitter />, url: "#" },
     { icon: <FaInstagram />, url: "#" },
+    { icon: <FaLinkedin />, url: "#" },
+    
   ];
 
   return (
@@ -53,7 +55,8 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-           We are a team dedicated to providing the best websites and services to our customers.
+          We are a team dedicated to providing the best websites and services to
+          our customers.
         </motion.p>
 
         {/* Social Links */}
@@ -87,7 +90,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          {["Home", "Services", "Gallery", "Reviews", "Contact"].map(
+          {["Home", "About Us", "Services", "Gallery", "Reviews", "Contact"].map(
             (item, i) => (
               <motion.li
                 key={i}

@@ -46,10 +46,11 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          We design mordern and responsive websites according to your branch and business needs.✨
+          We design modern and responsive websites according to your branch and
+          business needs.✨
         </motion.p>
 
-        {/* CTA Button */}
+        {/* Button */}
         <motion.button
           className="mt-10 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold shadow-lg"
           whileHover={{

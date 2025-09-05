@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "Services", "Gallery", "Reviews", "Contact"];
+  const navItems = ["Home", "About Us", "Services", "Gallery", "Reviews", "Contact"];
 
   return (
     <motion.nav
@@ -20,12 +20,12 @@ export default function Navbar() {
           className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_#9333ea]"
           whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #a855f7" }}
         >
-        .WebTech
+          .WebTech
         </motion.h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-white font-semibold">
-          {navItems.map((item, i) => (
+            {navItems.map((item, i) => (
             <motion.li
               key={i}
               className="relative cursor-pointer group"

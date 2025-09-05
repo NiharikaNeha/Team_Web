@@ -43,7 +43,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          🌌 Galaxy
+          .WebTech
         </motion.h2>
 
         {/* Tagline */}
@@ -53,7 +53,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Journey beyond the stars. Discover new worlds. Explore the unknown ✨
+           We are a team dedicated to providing the best websites and services to our customers.
         </motion.p>
 
         {/* Social Links */}
@@ -87,7 +87,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          {["About", "Services", "Planets", "Stars", "Contact"].map(
+          {["Home", "Services", "Gallery", "Reviews", "Contact"].map(
             (item, i) => (
               <motion.li
                 key={i}
@@ -107,7 +107,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          © {new Date().getFullYear()} Galaxy. All rights reserved.
+          © {new Date().getFullYear()} .WebTech, All rights reserved.
         </motion.div>
       </div>
     </footer>

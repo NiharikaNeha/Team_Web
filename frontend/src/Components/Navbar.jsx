@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "Services", "Gallery", "Reviews", "Contact"];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Reviews", path: "/reviews" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <motion.nav
@@ -16,12 +23,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <motion.h1
-          className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_#9333ea]"
-          whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #a855f7" }}
-        >
-        .WebTech
-        </motion.h1>
+        <Link to="/">
+          <motion.h1
+            className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_#9333ea]"
+            whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #a855f7" }}
+          >
+            .WebTech
+          </motion.h1>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-white font-semibold">
@@ -32,9 +41,12 @@ export default function Navbar() {
               whileHover={{ scale: 1.15 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <span className="group-hover:text-purple-400 transition duration-300">
-                {item}
-              </span>
+              <Link
+                to={item.path}
+                className="group-hover:text-purple-400 transition duration-300"
+              >
+                {item.name}
+              </Link>
               {/* Animated underline */}
               <motion.div className="absolute left-0 right-0 h-[2px] bg-purple-500 rounded-full scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
             </motion.li>
@@ -59,18 +71,17 @@ export default function Navbar() {
           className="md:hidden bg-gradient-to-b from-black via-indigo-950 to-black text-white px-6 py-6 space-y-6 shadow-lg"
         >
           {navItems.map((item, i) => (
-            <motion.div
+            <Link
               key={i}
-              className="text-lg font-medium cursor-pointer hover:text-purple-400"
-              whileHover={{ scale: 1.1, x: 10 }}
-              transition={{ type: "spring", stiffness: 250 }}
+              to={item.path}
+              className="block text-lg font-medium cursor-pointer hover:text-purple-400"
               onClick={() => setIsOpen(false)}
             >
-              {item}
-            </motion.div>
+              {item.name}
+            </Link>
           ))}
         </motion.div>
       )}
     </motion.nav>
   );
-}
+};

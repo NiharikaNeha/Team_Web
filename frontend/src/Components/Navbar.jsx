@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "Explore", "Planets", "Stars", "Contact"];
+  const navItems = ["Home", "Services", "Gallery", "Reviews", "Contact"];
 
   return (
     <motion.nav

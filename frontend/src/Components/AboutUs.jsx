@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="max-w-6xl mx-auto text-center">
         {/* Animated Heading */}
         <motion.h2
-          className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_#a855f7]"
+          className="text-4xl md:text-5xl font-bold mb-6 "
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

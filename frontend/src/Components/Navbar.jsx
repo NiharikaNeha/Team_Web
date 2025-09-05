@@ -3,10 +3,17 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "About Us", "Services", "Gallery", "Reviews", "Contact"];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Reviews", path: "/reviews" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <motion.nav
@@ -23,16 +30,10 @@ export const Navbar = () => {
         >
           .WebTech
         </motion.h1>
-          <motion.h1
-            className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_12px_#9333ea]"
-            whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #a855f7" }}
-          >
-            .WebTech
-          </motion.h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-white font-semibold">
-            {navItems.map((item, i) => (
+          {navItems.map((item, i) => (
             <motion.li
               key={i}
               className="relative cursor-pointer group"
@@ -83,3 +84,5 @@ export const Navbar = () => {
     </motion.nav>
   );
 };
+
+export default Navbar;

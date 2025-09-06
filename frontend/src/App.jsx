@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import Footer from './Components/Footer.jsx'
+import Footer from './Components/footer.jsx'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'

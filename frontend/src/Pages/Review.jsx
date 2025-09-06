@@ -1,5 +1,5 @@
 import React from 'react'
-import Reviews from '../Components/Reveiws'
+import Reviews from '../Components/Reviews'
 
 const Review = () => {
   return (

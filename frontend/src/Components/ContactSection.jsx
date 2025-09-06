@@ -95,7 +95,7 @@ const Contact = () => {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-8">
             <motion.button
               type="submit"
               className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 hover:scale-105 transition-transform duration-300 font-semibold shadow-lg"
@@ -112,17 +112,7 @@ const Contact = () => {
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
             >
-              Send via WhatsApp
-            </motion.button>
-
-            <motion.button
-              type="button"
-              onClick={handleSendEmail}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 hover:scale-105 transition-transform duration-300 font-semibold shadow-lg"
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Send via Gmail
+              Send to WhatsApp
             </motion.button>
           </div>
         </motion.form>

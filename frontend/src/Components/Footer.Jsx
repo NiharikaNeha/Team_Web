@@ -5,8 +5,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: <FaFacebookF />, url: "#" },
     { icon: <FaTwitter />, url: "#" },
-    { icon: <FaInstagram />, url: "#" },
-    { icon: <FaLinkedin />, url: "#" },
+    { icon: <FaInstagram />, url: "#" }
     
   ];
 
@@ -17,7 +16,7 @@ export default function Footer() {
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full"
+            className="absolute w-1 h-1 rounded-full"
             initial={{
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,

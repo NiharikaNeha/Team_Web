@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import Footer from './Components/Footer.Jsx'
+import Footer from './Components/Footer.jsx'
+import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
+import About from './Pages/About'
 import Service from './Pages/Service'
-import About from './Pages/AboutUs'
 import Gallery from './Pages/Gallery'
 import Review from './Pages/Review'
 import Contact from './Pages/Contact'
@@ -12,12 +13,14 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-      <Home/>
-      <About/>
-      <Service/>
-      <Gallery/>
-      <Review/>
-      <Contact/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/services' element={<Service/>}/>
+          <Route path='/gallery' element={<Gallery/>}/>
+          <Route path='/reviews' element={<Review/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+        </Routes>
       <Footer/>
     </div>
   )

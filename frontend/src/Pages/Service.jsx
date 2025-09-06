@@ -1,12 +1,12 @@
 import React from 'react'
-import Service from '../Components/Services'
+import Provide from '../Components/Services'
 
-const Services = () => {
+const Service = () => {
   return (
     <div>
-        <Service/>
+        <Provide/>
     </div>
   )
 }
 
-export default Services
+export default Service
